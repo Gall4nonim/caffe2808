@@ -1,0 +1,30 @@
+@use 'colors';
+
+.header-buttons{
+	z-index: 100;
+}
+
+.header-btn {
+	width: 130px;
+	padding: 15px;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-btn {
+	background: colors.$button-first;
+}
+.reservation-btn {
+	background: colors.$button-second;
+}
+
+.menu-btn:hover {
+	background: colors.$button-second;
+}
+.reservation-btn:hover {
+	background: colors.$button-first;
+}

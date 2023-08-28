@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb2e5f27a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav">
+                <div class="h-nav">
+
+                    <button class="burger-button" onclick="toggleMenu()">
+                        <div class="burger-icon">
+                            <div class="bar bar-one"></div>
+                            <div class="bar bar-two"></div>
+                            <div class="bar bar-three"></div>
+                        </div>
+                    </button>
+
+                    <div class="social-media">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+
+
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./img/logo.png"
+                                alt="Logo Coffee Shop, filiżanka kawy w okręgu z napisem Coffee Shop">
+                        </a>
+                    </div>
+                    <div class="white-block"></div>
+                </div>
+                <ul class="list">
+                    <li class="item"><a href="#">Home</a></li>
+                    <div class="next-to"> <button class="item dropdown-btn">O nas</button>
+                        <div class="arrow">
+                            <img src="./svg/corner-right-down.svg" class="arrow-down"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w dół">
+                            <img src="./svg/corner-right-up.svg" class="arrow-up hide-arrow"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w górę">
+                        </div>
+                    </div>
+                    <ul class="dropdown">
+                        <li><a href="#aboutus">O kawiarni</a></li>
+                        <li><a href="#team">Zespół</a></li>
+                        <li><a href="#opinion">Opinie</a></li>
+                        <li><a href="#joinus">Dołącz do nas</a></li>
+                    </ul>
+                    <li class="item"><a href="#menu">Menu</a></li>
+                    <li class="item"><a href="#blog">Blog</a></li>
+                    <li class="item"><a href="#shop">Sklep</a></li>
+                    <div class="next-to">
+                        <button class="item dropdown-btn">Rezerwacje</button>
+                        <div class="arrow">
+                            <img src="./svg/corner-right-down.svg" class="arrow-down"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w dół">
+                            <img src="./svg/corner-right-up.svg" class="arrow-up hide-arrow"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w górę">
+                        </div>
+                    </div>
+                    <ul class="dropdown">
+                        <li><a href="#table">Stolik</a></li>
+                        <li><a href="#room">Sala</a></li>
+                    </ul>
+                    <li class="item"><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+
+        <header>
+            <ul class="slides">
+
+                <li class="slide slide1 showing">
+
+                    <div class="header">
+                        <div class="header-text">
+                            <h1>Kawa dla Ciebie</h2>
+                                <p>Odkryj różnorodność smaków naszych wyjątkowych kaw</p>
+                                <div class="header-buttons">
+                                    <button class="header-btn menu-btn">Zobacz menu</button>
+                                    <button class="header-btn reservation-btn">Zarezerwuj</button>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div class="header-shadow"></div>
+                </li>
+
+                <li class="slide slide2">
+
+                    <div class="header">
+                        <div class="header-text">
+                            <h1>Parzona z pasją</h2>
+                                <p>Ze starannie wyselekcjonowanych ziaren kawy najwyższej jakości</p>
+                                <div class="header-buttons">
+                                    <button class="header-btn menu-btn">Zobacz menu</button>
+                                    <button class="header-btn reservation-btn">Zarezerwuj</button>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="header-shadow"></div>
+                </li>
+
+                <li class="slide slide3">
+
+                    <div class="header">
+                        <div class="header-text">
+                            <h1>Najlepszi bariści</h2>
+                                <p>Wyjątkowo i majestatycznie podana kawa, dzięki naszemu presonelowi</p>
+                                <div class="header-buttons">
+                                    <button class="header-btn menu-btn">Zobacz menu</button>
+                                    <button class="header-btn reservation-btn">Zarezerwuj</button>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div class="header-shadow"></div>
+                </li>
+
+                <button onClick="prevSlide();"><i class="arrow-slide arrow-next fa fa-angle-left fa-5x"></i></button>
+                <button onClick="nextSlide();"><i class="arrow-slide arrow-prev fa fa-angle-right fa-5x"></i></button>
+            </ul>
+
+
+        </header>
+
+        <main>
+
+            <section id="aboutus" class="aboutus">
+
+                <div class="container">
+
+                    <div class="headline">
+
+                        <div class="underline">
+                            <img src="./svg/beans.png" alt="" class="underline-beans-left">
+                            <div class="bar"></div>
+                            <!-- <img src="./svg/beans.png" alt="" class="underline-beans-right"> -->
+                        </div>
+
+                        <h2>Kilka słów o naszej kawiarni</h2>
+
+                        <div class="underline">
+                            <div class="bar"></div>
+                            <img src="./svg/beans.png" alt="" class="underline-beans-right">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="aboutus-box">
+                        <img src="./img/aboutus-big.jpg" alt="" class="aboutus-img">
+                        <div class="text">
+                            <p>Jesteśmy pasjonatami kawy i wiemy, że nie ma lepszego sposobu na rozpoczęcie dnia niż
+                                zapach
+                                świeżo parzonej kawy, która pobudza zmysły i cieszy podniebienie. Nasz niewątpliwy atut
+                                to
+                                starannie wyselekcjonowane ziarna, pochodzące z najodleglejszych zakątków świata.</p>
+                                
+                            <p><img src="./svg/beans.png" alt="" class="underline-beans-left"
+                                style="width:30px; height:30px; opacity:.75;">Dbamy o smak kawy
+                            </p>
+                            <p><img src="./svg/beans.png" alt="" class="underline-beans-left"
+                                style="width:30px; height:30px; opacity:.75;">Serwujemy super desery
+                            </p>
+                            <p><img src="./svg/beans.png" alt="" class="underline-beans-left"
+                                style="width:30px; height:30px; opacity:.75;">Zapewniamy miła atmosferę
+                            </p>
+
+                            <!-- <p> Dbamy o każdy detal, od uprawy po palenie, by dostarczyć Tobie niezapomniany smak i
+                                aromat.
+                                Każda filiżanka to dla nas sztuka, którą chcemy podzielić się z naszymi Gośćmi. Choć
+                                kawa
+                                jest
+                                sercem naszej kawiarni, to nie możemy też zapomnieć o słodkich pokusach. Nasze wykwintne
+                                ciasta,
+                                przygotowywane z pasją i najwyższej jakości składników, doskonale komponują się z
+                                aromatycznymi
+                                napojami. </p> -->
+                        </div>
+                        <img src="./svg/beans.png" alt="" class="aboutus-coffee-cup-img">
+                    </div>
+
+                    <div class="cards">
+
+
+                        <div class="card">
+                            <div class="card-img one"></div>
+                            <div class="card-text">
+                                <h3 class="card-h3">Team</h3>
+                            </div>
+                            <div class="card-text2">
+                                <i class="card-i fa-solid fa-people-group"></i>
+                                <p class="card-description">Zapoznaj się z załogą naszej kawiarni</p>
+                            </div>
+                            <a href="index.html">
+                                <div class="card-shadow"></div>
+                            </a>
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-img two"></div>
+                            <div class="card-text">
+                                <h3>Opinie</h3>
+                            </div>
+                            <div class="card-text2">
+                                <i class="card-i fa-regular fa-comment"></i>
+                                <p class="card-description">Sprawdź opinie, lub wyraź własną</p>
+                            </div>
+                            <a href="index.html">
+                                <div class="card-shadow"></div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img three"></div>
+                            <div class="card-text">
+                                <h3>Dołącz do nas</h3>
+                            </div>
+                            <div class="card-text2">
+                                <i class="card-i fa-solid fa-handshake-simple"></i>
+                                <p class="card-description">Dołącz do naszej sympatycznej ekipy</p>
+                            </div>
+                            <a href="index.html">
+                                <div class="card-shadow"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="menu">
+                <div class="container">
+
+
+                    <div class="headline">
+
+                        <div class="underline">
+                            <img src="./svg/beans.png" alt="" class="underline-beans-left">
+                            <div class="bar"></div>
+                            <!-- <img src="./svg/beans.png" alt="" class="underline-beans-right"> -->
+                        </div>
+
+                        <h2>Menu</h2>
+
+                        <div class="underline">
+                            <div class="bar"></div>
+                            <img src="./svg/beans.png" alt="" class="underline-beans-right">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+    </div>
+    </main>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
