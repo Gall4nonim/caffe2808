@@ -8,11 +8,12 @@
 	width: 130px;
 	padding: 15px;
 	border: none;
-	border-radius: 8px;
+	border-radius: 18px;
 	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
     cursor: pointer;
+	box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .menu-btn {
@@ -27,4 +28,41 @@
 }
 .reservation-btn:hover {
 	background: colors.$button-first;
+}
+
+
+//menu btn
+
+.offer-btn {
+	width: auto;
+	padding: 5px;
+	border: none;
+	border-radius: 18px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+    cursor: pointer;
+}
+
+.coffee-btn {
+	background: colors.$button-second;
+}
+
+
+//reservation btn
+
+.form-btn {
+	margin-bottom: 15px;
+	font-family: 'Work Sans', sans-serif;
+	background-color: colors.$brown-main;
+	width: 100px;
+	padding: 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 18px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+    cursor: pointer;
+	box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.5);
 }

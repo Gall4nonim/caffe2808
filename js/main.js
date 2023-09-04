@@ -68,9 +68,6 @@ dropdownBtns.forEach((dropdownBtn, index) => {
 
 burgerIcon.addEventListener('click', showNav)
 
-
-
-
 const slides = document.querySelectorAll('.slides .slide')
 let currentSlide = 0
 // let slideInterval = setInterval(nextSlide,4000);
@@ -87,19 +84,123 @@ function prevSlide() {
 	slides[currentSlide].classList.add('showing')
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+	var card = document.querySelector('.card')
+	var cardText = document.querySelector('.card-text2')
 
+	card.addEventListener('mouseenter', function () {
+		cardText.classList.add('show-animation')
+		cardText.classList.remove('hide-animation')
+	})
 
-document.addEventListener("DOMContentLoaded", function() {
-	var card = document.querySelector(".card");
-	var cardText = document.querySelector(".card-text2");
-  
-	card.addEventListener("mouseenter", function() {
-	  cardText.classList.add("show-animation");
-	  cardText.classList.remove("hide-animation");
-	});
-  
-	card.addEventListener("mouseleave", function() {
-	  cardText.classList.add("hide-animation");
-	  cardText.classList.remove("show-animation");
-	});
-  });
+	card.addEventListener('mouseleave', function () {
+		cardText.classList.add('hide-animation')
+		cardText.classList.remove('show-animation')
+	})
+})
+
+//hide animation
+
+const cards = [...document.querySelectorAll('.card')]
+const cardTexts = [...document.querySelectorAll('.card-text2')]
+cards.forEach(
+	(card, index) => {
+		card.addEventListener('mouseenter', () => {
+			cardTexts[index].classList.add('hide-icon')
+		})
+	},
+	{ once: true }
+)
+
+//menu-select
+
+const coffee = document.querySelector('.coffee-button')
+const tea = document.querySelector('.tea-button')
+const cake = document.querySelector('.cake-button')
+const cupCake = document.querySelector('.cupcake-button')
+
+const menuCoffee = document.querySelector('.menu-coffee')
+const menuHotDrinks = document.querySelector('.menu-hot-drinks')
+const menuCake = document.querySelector('.menu-cake')
+const menuCupCake = document.querySelector('.menu-cupcake')
+
+const changeToCoffee = () => {
+	menuCoffee.classList.add('menu-show')
+	menuCake.classList.remove('menu-show')
+	menuHotDrinks.classList.remove('menu-show')
+	menuCupCake.classList.remove('menu-show')
+	coffee.style.backgroundColor = '#573517'
+	tea.style.backgroundColor = '#cfa47e'
+	cake.style.backgroundColor = '#cfa47e'
+	cupCake.style.backgroundColor = '#cfa47e'
+}
+const changeToTea = () => {
+	menuCoffee.classList.remove('menu-show')
+	menuCoffee.classList.add('menu-hide')
+	menuHotDrinks.classList.add('menu-show')
+	menuCake.classList.remove('menu-show')
+	menuCupCake.classList.remove('menu-show')
+	tea.style.backgroundColor = '#573517'
+	coffee.style.backgroundColor = '#cfa47e'
+	cake.style.backgroundColor = '#cfa47e'
+	cupCake.style.backgroundColor = '#cfa47e'
+}
+const changeToCake = () => {
+	menuCake.classList.add('menu-show')
+	menuCoffee.classList.remove('menu-show')
+	menuCoffee.classList.add('menu-hide')
+	menuHotDrinks.classList.remove('menu-show')
+	menuCupCake.classList.remove('menu-show')
+	cake.style.backgroundColor = '#573517'
+	coffee.style.backgroundColor = '#cfa47e'
+	tea.style.backgroundColor = '#cfa47e'
+	cupCake.style.backgroundColor = '#cfa47e'
+}
+const changeToCupCake = () => {
+	menuCupCake.classList.add('menu-show')
+	menuCoffee.classList.remove('menu-show')
+	menuCoffee.classList.add('menu-hide')
+	menuHotDrinks.classList.remove('menu-show')
+	menuCake.classList.remove('menu-show')
+	cupCake.style.backgroundColor = '#573517'
+	cake.style.backgroundColor = '#cfa47e'
+	coffee.style.backgroundColor = '#cfa47e'
+	tea.style.backgroundColor = '#cfa47e'
+}
+
+tea.addEventListener('click', changeToTea)
+coffee.addEventListener('click', changeToCoffee)
+cake.addEventListener('click', changeToCake)
+cupCake.addEventListener('click', changeToCupCake)
+
+//resevation
+
+const phone = document.querySelector('#phone')
+const username = document.querySelector('#name')
+const email = document.querySelector('#email')
+
+const sendBtn = document.querySelector('.send-btn')
+const clearBtn = document.querySelector('.clear-btn')
+
+const def = document.querySelector('#def')
+const yourClass = document.querySelector('.red-placeholder')
+
+const checkForm = (input) => {
+	input.forEach(el => {
+		if (el.value === '') {
+			el.classList.add('red-placeholder')
+		}
+	})
+}
+
+sendBtn.addEventListener('click', e => {
+	e.preventDefault() //not refresh website
+	checkForm([phone, username, email])
+})
+
+clearBtn.addEventListener('click', e => {
+	e.preventDefault() //not refresh website
+	;[phone, username, email].forEach(el => {
+		el.value = ''
+	})
+})

@@ -67,8 +67,12 @@
 	}
 }
 
-@keyframes show-icon-hide {
+
+@keyframes showWidthMenuBox {
+	from {
+		width: 80%;
+	}
 	to {
-		display: none; /* Po zakończeniu drugiej animacji zmieniamy display na none */
+		width: 100%;
 	}
 }
