@@ -1,11 +1,16 @@
 @use 'colors';
 
+button {
+	letter-spacing: 1px;
+}
+
 .header-buttons{
 	z-index: 100;
 }
 
 .header-btn {
-	width: 130px;
+	width: 145px;
+	margin: 5px;
 	padding: 15px;
 	border: none;
 	border-radius: 18px;
@@ -52,12 +57,10 @@
 //reservation btn
 
 .form-btn {
-	margin-bottom: 15px;
-	font-family: 'Work Sans', sans-serif;
 	background-color: colors.$brown-main;
 	width: 100px;
 	padding: 10px;
-	margin-top: 10px;
+	margin: 20px 0;
 	border: none;
 	border-radius: 18px;
 	color: white;
@@ -65,4 +68,12 @@
 	font-weight: bold;
     cursor: pointer;
 	box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+.close-btn {
+	margin-top: 0;
+}
+.footer-btn {
+	background-color: colors.$button-first;
+	width: 35%;
+	margin: 10px;
 }

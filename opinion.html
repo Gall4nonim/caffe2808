@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb2e5f27a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav">
+                <div class="h-nav">
+
+                    <button class="burger-button">
+                        <div class="burger-icon">
+                            <div class="bar bar-one"></div>
+                            <div class="bar bar-two"></div>
+                            <div class="bar bar-three"></div>
+                        </div>
+                    </button>
+
+                    <div class="social-media">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+
+
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./img/logo.png"
+                                alt="Logo Coffee Shop, filiżanka kawy w okręgu z napisem Coffee Shop">
+                        </a>
+                    </div>
+                    <div class="white-block"></div>
+                </div>
+                <ul class="list">
+                    <li class="item"><a href="index.html">Home</a></li>
+
+                    <div class="next-to">
+                        <button class="item dropdown-btn">O nas</button>
+                        <div class="arrow">
+                            <img src="./svg/corner-right-down.svg" class="arrow-down"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w dół">
+                            <img src="./svg/corner-right-up.svg" class="arrow-up hide-arrow"
+                                alt="Strzałka wychodząca z prawego rogu kierująca się w górę">
+                        </div>
+                    </div>
+                    <ul class="dropdown">
+                        <li><a href="index.html#aboutus">O kawiarni</a></li>
+                        <li><a href="team.html">Zespół</a></li>
+                        <li><a href="index.html#opinion">Opinie</a></li>
+                        <li><a href="index.html#joinus">Dołącz do nas</a></li>
+                    </ul>
+
+                    <li class="item"><a href="index.html#menu">Menu</a></li>
+
+                    <li class="item"><a href="index.html#reservation">Rezerwacje</a></li>
+
+
+                    <li class="item"><a href="index.html#blog">Blog</a></li>
+                    <li class="item"><a href="index.html#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="container">
+            <div class="opinion-container">
+
+                <div class="opinion-box">
+
+                    <div class="opinion">
+                        <div class="opinion-info">
+                            <div class="opinion-avatar avatar-men"></div>
+                            <div class="nick-time">
+                                <h3>Mikołaj Kopernik</h3>
+                                <div class="time">14 lipca, 2023</div>
+                            </div>
+                        </div>
+
+                        <div class="opinion-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laborum, est nostrum
+                                repellendus eveniet totam quae expedita cupiditate quibusdam doloribus aliquid sequi
+                                voluptatibus provident sint odio facere? Ipsam illum modi tenetur quibusdam enim, vitae
+                                recusandae cum, optio quod molestias quis, cumque eius quam corrupti fugit deleniti
+                                repellendus molestiae sit maiores?</p>
+                        </div>
+
+                        <div class="opinion-rate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="new-opinion-box">
+                    <h3>Dodaj swoją opinie</h3>
+                    <form>
+
+                        <div class="sex">
+                            <p>Płeć</p>
+                            <select id="sex-select">
+                                <option value="">-- Wybierz płeć --</option>
+                                <option id="women" value="avatar-women">Kobieta</option>
+                                <option id="men" value="avatar-men">Mężczyzna</option>
+                            </select>
+
+                        </div>
+
+                        <div class="name-surname">
+                            <p>Imię i nazwisko</p>
+                            <input type="text" placeholder="Imię i nazwisko" id="name-opinion">
+                        </div>
+
+                        <div class="opinion-area">
+                            <p>Opinia</p>
+                            <textarea placeholder="Minimum 15 znaków" id="opinion-content"></textarea>
+                        </div>
+
+                        <div class="stars">
+                            <p>Ocena</p>
+                            <select id="stars-select">
+                                <option value="">-- Wybierz ocenę --</option>
+                                <option id="one" value="1">1</option>
+                                <option id="two" value="2">2</option>
+                                <option id="three" value="3">3</option>
+                                <option id="four" value="4">4</option>
+                                <option id="five" value="5">5</option>
+                            </select>
+                        </div>
+
+                    </form>
+                    <button class="create-opinion">Wyślij</button>
+                    <p class="opinion-error">Uzupełnij wszystkie pola. Pamiętaj, że opinia musi składać się z przynajmniej z 15 znaków</p>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <div class="top-footer">
+
+                <div class="find-us">
+                    <div class="find-us text-footer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>Znajdź nas</h4>
+                        <p>Fiołkowa 13, Poznań</p>
+                    </div>
+                </div>
+                <div class="call-us">
+
+                    <div class="call-us text-footer">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>Zadzwoń</h4>
+                        <p>721832695</p>
+                    </div>
+                </div>
+                <div class="mail-us">
+
+                    <div class="mail-us text-footer">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h4>Napisz</h4>
+                        <p>coffee@shop.com</p>
+                    </div>
+                </div>
+
+
+                <div class="subscribe">
+                    <h4>Subskrybuj</h4>
+                    <p>Podaj swój email i bądź na bierząco z promocjami i ciekawymi artykułami z naszego bloga</p>
+                    <div class="input-box">
+                        <input type="email" id="email2" class="form-footer">
+                        <p class="error-footer">Email jest niepoprawny</p>
+                        <button class="form-btn footer-btn">Wyślij</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <script src="js/opinion.js"></script>
+</body>
+
+</html>
